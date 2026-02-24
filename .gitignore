@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.coverage
+config.json
+user_data.json

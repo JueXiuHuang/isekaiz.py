@@ -1,0 +1,21 @@
+{
+  "token": "",
+  "channelId": "",
+  "profession": "none",
+  "checkDelay": 60000,
+  "taskGap": 2000,
+  "taskBias": 3000,
+  "retryCount": 2,
+  "treasureHunter": false,
+  "treasureGuild": "",
+  "expFood": "sushi-roll",
+  "captchaModel": "./model/captcha.onnx",
+  "sellEquip": [
+    "F",
+    "E",
+    "D"
+  ],
+  "trustUsr": [],
+  "craftChannelId": "",
+  "craftMaterial": "Platinum"
+}

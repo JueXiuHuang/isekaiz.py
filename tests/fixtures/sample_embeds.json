@@ -1,0 +1,156 @@
+{
+  "battle_window": {
+    "title": "Current Floor: 5",
+    "description": "Select your action",
+    "author_name": ""
+  },
+  "battle_victory": {
+    "title": "You Defeated A Goblin!",
+    "description": "You gained 100 EXP",
+    "author_name": "",
+    "fields": [
+      {
+        "name": "EXP",
+        "value": "+100",
+        "inline": true
+      },
+      {
+        "name": "Gold",
+        "value": "+50",
+        "inline": true
+      }
+    ]
+  },
+  "battle_defeat": {
+    "title": "Better Luck Next Time!",
+    "description": "You were defeated",
+    "author_name": ""
+  },
+  "battle_started": {
+    "title": "BATTLE STARTED",
+    "description": "Fighting Goblin",
+    "author_name": ""
+  },
+  "already_in_battle": {
+    "title": "",
+    "description": "",
+    "content": "You are already in a battle"
+  },
+  "verification_emoji": {
+    "title": "Verification",
+    "description": "Choose the correct option...",
+    "author_name": ""
+  },
+  "verification_captcha": {
+    "title": "Verification",
+    "description": "Please enter the captcha code from the image to verify.",
+    "author_name": "TestUser"
+  },
+  "verification_success": {
+    "title": "Verification",
+    "description": "Successfully Verified.",
+    "author_name": "TestUser"
+  },
+  "verification_manual": {
+    "title": "Verification",
+    "description": "Please complete the captcha",
+    "author_name": "TestUser"
+  },
+  "verification_retry": {
+    "title": "Verification",
+    "description": "Please Try doing $verify again.",
+    "author_name": "TestUser"
+  },
+  "profession_mining": {
+    "title": "Mining",
+    "description": "Select a mining action",
+    "author_name": ""
+  },
+  "profession_fishing": {
+    "title": "Fishing",
+    "description": "Select a fishing action",
+    "author_name": ""
+  },
+  "profession_foraging": {
+    "title": "Foraging",
+    "description": "Select a foraging action",
+    "author_name": ""
+  },
+  "profession_mining_complete": {
+    "title": "Mining Complete!",
+    "description": "You found Iron Ore",
+    "author_name": "",
+    "fields": [
+      {
+        "name": "Iron Ore",
+        "value": "+1",
+        "inline": true
+      }
+    ]
+  },
+  "profession_fishing_complete": {
+    "title": "You caught a Common Fish!",
+    "description": "Nice catch!",
+    "author_name": ""
+  },
+  "profession_foraging_complete": {
+    "title": "You found a Wild Berry!",
+    "description": "Found something!",
+    "author_name": ""
+  },
+  "profession_started_mining": {
+    "title": "You started mining!",
+    "description": "",
+    "author_name": ""
+  },
+  "profession_started_fishing": {
+    "title": "You cast your rod!",
+    "description": "",
+    "author_name": ""
+  },
+  "profession_started_foraging": {
+    "title": "You start foraging!",
+    "description": "",
+    "author_name": ""
+  },
+  "already_mining": {
+    "title": "",
+    "description": "",
+    "content": "You are already mining"
+  },
+  "equipment_sold": {
+    "title": "Equipment Sold",
+    "description": "You gained 5,000 Gold",
+    "author_name": ""
+  },
+  "retainer_ready": {
+    "title": "Hired Workers",
+    "description": "Time elapsed: 3 hours\nMaterials produced: 10",
+    "author_name": ""
+  },
+  "retainer_not_ready": {
+    "title": "Hired Workers",
+    "description": "Time elapsed: 0 hours\nMaterials produced: 0",
+    "author_name": ""
+  },
+  "treasure_spawn": {
+    "title": "Chest Spawned!",
+    "description": "A treasure chest has appeared!",
+    "author_name": ""
+  },
+  "no_energy": {
+    "title": "",
+    "description": "You don't have enough energy to battle!",
+    "author_name": ""
+  },
+  "suspended": {
+    "title": "Suspended",
+    "description": "Your account has been suspended",
+    "author_name": ""
+  },
+  "final_location": {
+    "title": "",
+    "description": "",
+    "content": "You are already at the final location of this area."
+  }
+}
