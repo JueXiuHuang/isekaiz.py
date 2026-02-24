@@ -1,0 +1,19 @@
+FROM python:3.11.14-slim-bookworm
+
+WORKDIR /workspace/isekaiz.py
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    ssh \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install Python dependencies
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# Set SSH agent environment variable
+ENV SSH_AUTH_SOCK=/ssh-agent
+
+# Keep container running for development
+CMD ["tail", "-f", "/dev/null"]

@@ -1,0 +1,15 @@
+services:
+  isekaiz-dev:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    container_name: isekaiz-dev
+    volumes:
+      - .:/workspace/isekaiz.py
+      - ../ISeKaiZ-Bot:/workspace/ISeKaiZ-Bot
+      - ${HOME}/.ssh/agent.sock:/ssh-agent
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
