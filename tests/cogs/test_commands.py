@@ -101,6 +101,26 @@ class TestCommandsCog:
         mock_ctx.reply.assert_called_once()
 
     @pytest.mark.asyncio
+    async def test_battle_toggles_on(self, commands_cog, mock_ctx):
+        """Test that !battle toggles enable_battle on."""
+        commands_cog.bot.player.enable_battle = False
+
+        await commands_cog.toggle_battle.callback(commands_cog, mock_ctx)
+
+        assert commands_cog.bot.player.enable_battle is True
+        mock_ctx.reply.assert_called_once()
+
+    @pytest.mark.asyncio
+    async def test_battle_toggles_off(self, commands_cog, mock_ctx):
+        """Test that !battle toggles enable_battle off."""
+        commands_cog.bot.player.enable_battle = True
+
+        await commands_cog.toggle_battle.callback(commands_cog, mock_ctx)
+
+        assert commands_cog.bot.player.enable_battle is False
+        mock_ctx.reply.assert_called_once()
+
+    @pytest.mark.asyncio
     async def test_status_command_replies(self, commands_cog, mock_ctx):
         """Test that !status replies with status."""
         commands_cog.bot.controller.task_manager = MagicMock()

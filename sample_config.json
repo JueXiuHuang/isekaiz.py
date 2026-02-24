@@ -1,6 +1,7 @@
 {
   "token": "",
   "channelId": "",
+  "enableBattle": true,
   "profession": "none",
   "checkDelay": 60000,
   "taskGap": 2000,

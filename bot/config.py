@@ -37,6 +37,7 @@ class Config:
     channel_id: str
 
     # Optional fields with defaults
+    enable_battle: bool = True
     profession: ProfessionType = "none"
     check_delay: int = 60000  # milliseconds
     task_gap: int = 2000      # milliseconds between tasks
@@ -80,6 +81,7 @@ class Config:
         return cls(
             token=data["token"],
             channel_id=data["channelId"],
+            enable_battle=data.get("enableBattle", True),
             profession=data.get("profession", "none"),
             check_delay=data.get("checkDelay", 60000),
             task_gap=data.get("taskGap", 2000),
@@ -100,6 +102,7 @@ class Config:
         return {
             "token": self.token,
             "channelId": self.channel_id,
+            "enableBattle": self.enable_battle,
             "profession": self.profession,
             "checkDelay": self.check_delay,
             "taskGap": self.task_gap,

@@ -41,6 +41,7 @@ class ISeKaiZBot(commands.Bot):
 
         self.config = config
         self.player: Player = Player.create(config.channel_id)
+        self.player.enable_battle = config.enable_battle
         self.controller: Controller = Controller(self.player, config)
         self.captcha_ai: CaptchaAI | None = None
 

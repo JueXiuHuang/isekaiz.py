@@ -100,6 +100,7 @@ class Player:
     # Counters and flags
     sell: int = 0
     auto_level: bool = False
+    enable_battle: bool = True
 
     # Persistent data
     user_data: UserData = field(default_factory=UserData.load)

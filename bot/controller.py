@@ -260,7 +260,10 @@ class Controller:
     async def _on_init(self) -> None:
         """Handle INIT state - start main loops."""
         self.update_state(BotState.RUNNING)
-        await self._map_recursion()
+        if self.player.enable_battle:
+            await self._map_recursion()
+        else:
+            logger.info("Battle disabled")
         await self._prof_recursion()
 
     async def _on_running(self) -> None:

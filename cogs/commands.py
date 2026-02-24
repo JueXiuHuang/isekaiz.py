@@ -78,6 +78,22 @@ class Commands(commands.Cog):
 
         await ctx.reply(f"Auto level is now {status}")
 
+    @commands.command(name="battle")
+    async def toggle_battle(self, ctx: commands.Context) -> None:
+        """Toggle battle mode.
+
+        Args:
+            ctx: Command context.
+        """
+        if ctx.author.id != self.bot.user.id:
+            return
+
+        self.bot.player.enable_battle = not self.bot.player.enable_battle
+        status = "ON" if self.bot.player.enable_battle else "OFF"
+        logger.info(f"Battle is now {status}")
+
+        await ctx.reply(f"Battle is now {status}")
+
     @commands.command(name="status")
     async def show_status(self, ctx: commands.Context) -> None:
         """Show current bot status.
@@ -93,6 +109,7 @@ class Commands(commands.Cog):
 
         status_msg = (
             f"**State:** {player.state.value}\n"
+            f"**Battle:** {'ON' if player.enable_battle else 'OFF'}\n"
             f"**Auto Level:** {'ON' if player.auto_level else 'OFF'}\n"
             f"**Zone Index:** {player.user_data.zone_index}\n"
             f"**Task Queue:** {controller.task_manager.queue_size} tasks\n"
